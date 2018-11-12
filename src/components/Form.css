@@ -104,8 +104,16 @@
 }
 
 @media only screen and (max-width: 970px) {
+    .formContainer {
+        height: 80vh;
+    }
+
     .formTitle {
         font-size: 100%;
+    }
+
+    .sectionContainer-small {
+        width: 100%;
     }
 
     .submitButton {
