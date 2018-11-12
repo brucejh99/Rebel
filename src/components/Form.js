@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Form.css';
 
 export default class Form extends Component {
   constructor (props) {
@@ -28,14 +29,21 @@ export default class Form extends Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit.bind(this)}>
-              <label>Name</label>
-              <input type="text" value={this.state.inputValue} onChange={this.handleChange.bind(this)}/>
-              <label>Email</label>
-              <input type="text" value={this.state.emailValue} onChange={this.handleChange.bind(this)}/>
-              <label>Message</label>
-              <input type="text" value={this.state.messageValue} onChange={this.handleChange.bind(this)}/>
-              <input type="submit" value="Submit"/>
+      <form className="formContainer" onSubmit={this.handleSubmit.bind(this)}>
+        <h2 className="formTitle">Contact Us</h2>
+        <div className="smallSectionContainer">
+          <label className="smallSectionText">Name</label>
+          <input className="smallSectionInput" type="text" value={this.state.inputValue} onChange={this.handleChange.bind(this)}/>
+        </div>
+        <div className="smallSectionContainer">
+          <label className="smallSectionText">Email</label>
+          <input className="smallSectionInput" type="text" value={this.state.emailValue} onChange={this.handleChange.bind(this)}/>
+        </div>
+        <div className="largeSectionContainer">
+          <label className="largeSectionText">Message</label>
+          <input className="largeSectionInput" type="text" value={this.state.messageValue} onChange={this.handleChange.bind(this)}/>
+        </div>
+        <input className="submitButton" type="submit" value="Submit"/>
       </form>
     );
   }
